@@ -1,0 +1,101 @@
+html {
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $light-grey;
+}
+
+.logo {
+  background-size: 5em;
+  background-repeat: no-repeat;
+  width: 7em;
+  background-position-x: -25px;
+  background-position-y: -8px;
+  height: $logo-height;
+  line-height: 45px;
+  background-image: $logo-orange;
+  text-align: right;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.main__inner {
+  padding: 2em;
+  top: calc(60px + 1em);
+  position: relative;
+  z-index: -1;
+}
+
+.nav__wrapper {
+  background-color: $dark-blue;
+  box-sizing: border-box;
+  height: $nav-height;
+  color: $white;
+  padding: 0.5em 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav__main-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__mobile-button {
+  font-size: 30px;
+}
+
+.nav__mobile-button:active {
+  color: $aquarium;
+}
+
+.nav__buttons-wrapper {
+  right: -115%;
+  top: $nav-height;
+  position: absolute;
+  transition: right 1s ease;
+  background-color: $orange;
+  width: 100%;
+  box-shadow: 0 5px 15px #b1b1b1;
+  margin: 0;
+}
+
+.nav__buttons-inner {
+  display: flex;
+  justify-content: space-between;
+  height: $nav-height;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.nav__buttons-wrapper--show {
+  right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $white;
+  flex-direction: column;
+  width: 8em;
+  justify-content: center;
+}
+
+.nav__link:active {
+  background-color: $dark-blue;
+}
+
+.nav__link--active {
+  background-color: $dark-blue;
+  font-weight: 500;
+}
+
+.nav__link-title {
+  margin-top: 3px;
+}
+

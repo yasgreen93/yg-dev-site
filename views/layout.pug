@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title #{h.siteName}
+    link(rel='stylesheet', href='/dist/style.css')
+    link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(charset="UTF-8")
+    script(src="/javascripts/helpers.js")
+  body
+    block header
+      nav.nav__wrapper
+        .nav__main-items
+          .logo= h.siteName
+          .nav__mobile-button(onClick="toggleMenu()")
+            i.fas.fa-bars
+        .nav__buttons-wrapper
+          .nav__buttons-inner
+            each item in h.menu
+              a.nav__link(href=item.slug, class=(currentPath.endsWith(item.slug) ? 'nav__link--active' : ''))
+                i(class=item.icon)
+                span.nav__link-title #{item.title}
+          
+    block content
+
+    block scripts
+      script(src="/dist/App.bundle.js")
