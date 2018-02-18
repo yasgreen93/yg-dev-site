@@ -25,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // pass variables to templates + all requests
 app.use((req, res, next) => {
   res.locals.h = helpers;
-  console.log('path:', req.path);
   res.locals.currentPath = req.path;
   next();
 });

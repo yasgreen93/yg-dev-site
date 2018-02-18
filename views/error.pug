@@ -2,6 +2,7 @@ extends layout
 
 block content
   .main__inner
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+    h1.header__title= message
+      .content__wrapper
+        h2= error.status
+        pre #{error.stack}
