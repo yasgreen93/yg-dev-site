@@ -2,6 +2,12 @@ extends layout
 
 block content
   .main__inner
-    h1 #{h.siteName}
-    p Welcome to #{h.siteName}
-    .tester woooo
+    h1.header__title About me
+    .content__wrapper
+      p Hi, I'm Yasmin
+      .image
+        img.profile__image(src="/logo-orange.svg", data-src="/images/profile-pic.jpg" alt="Yasmin Green profile picture")
+      .main__text
+        p= h.dummyText
+        p= h.dummyText
+        p= h.dummyText
