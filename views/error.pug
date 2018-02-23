@@ -2,7 +2,8 @@ extends layout
 
 block content
   .main__inner
-    h1.header__title= message
+    h1.header__title= Error
       .content__wrapper
-        h2= error.status
-        pre #{error.stack}
+        h2= status
+        p= message
+  pre.error!= stackHighlighted
