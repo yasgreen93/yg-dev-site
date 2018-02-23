@@ -59,7 +59,7 @@ body {
   box-sizing: border-box;
   height: $nav-height;
   color: $white;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 2em;
   position: fixed;
   top: 0;
   width: 100%;
@@ -136,7 +136,7 @@ body {
   min-height: 100vh;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 590px) {
   .nav__mobile-button {
     display: none;
   }
@@ -163,7 +163,7 @@ body {
   }
 
   .nav__main-items {
-    padding: 8px 24px;
+    padding: 8px 1em;
   }
 
   .nav__link--active {

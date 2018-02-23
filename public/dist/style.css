@@ -54,7 +54,7 @@ body {
           box-sizing: border-box;
   height: 60px;
   color: #fff;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 2em;
   position: fixed;
   top: 0;
   width: 100%;
@@ -143,7 +143,7 @@ body {
 .content__wrapper {
   min-height: 100vh; }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 590px) {
   .nav__mobile-button {
     display: none; }
   .nav__wrapper {
@@ -167,7 +167,7 @@ body {
             box-shadow: none;
     background-color: transparent; }
   .nav__main-items {
-    padding: 8px 24px; }
+    padding: 8px 1em; }
   .nav__link--active {
     background-color: #E47132; } }
 
@@ -211,5 +211,69 @@ body {
 
 .profile__image--loaded {
   opacity: 1; }
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.contact-form__inner-bottom {
+  text-align: center; }
+
+.input__box {
+  padding: 1em;
+  font-size: 17px;
+  color: #1D1A97;
+  margin: 0.5em 0;
+  background-image: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500; }
+
+.input__box::-webkit-input-placeholder {
+  color: #1D1A97; }
+
+.input__box--message {
+  resize: vertical; }
+
+.input__box--submit {
+  min-width: 40%;
+  border: none;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #E47132;
+  color: #fff;
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
+
+.input__box--submit:hover {
+  background-color: #c96936;
+  cursor: pointer; }
+
+@media screen and (min-width: 580px) {
+  .contact-form__inner-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .contact-form__inner-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .input__box--name {
+    margin-right: 1em; }
+  .input__box--submit {
+    max-width: 40%; } }
 
 /*# sourceMappingURL=style.css.map*/

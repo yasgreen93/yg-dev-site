@@ -1,0 +1,63 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__inner-bottom {
+  text-align: center;
+}
+
+.input__box {
+  padding: 1em;
+  font-size: 17px;
+  color: $dark-blue;
+  margin: 0.5em 0;
+  background-image: none !important;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+}
+
+.input__box::-webkit-input-placeholder {
+  color: $dark-blue;
+}
+
+.input__box--message {
+  resize: vertical;
+}
+
+.input__box--submit {
+  min-width: 40%;
+  border: none;
+  align-self: center;
+  background-color: $orange;
+  color: $white;
+  transition: background-color 0.5s ease;
+}
+
+.input__box--submit:hover {
+  background-color: $dark-orange;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 580px) {
+  .contact-form__inner-top {
+    display: flex;
+  }
+  
+  .contact-form__inner-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input__box--name {
+    margin-right: 1em;
+  }
+
+  .input__box--submit {
+    max-width: 40%;
+  }
+  
+}
