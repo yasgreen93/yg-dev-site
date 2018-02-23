@@ -31,6 +31,8 @@ body {
   position: relative;
   color: $dark-grey;
   overflow: hidden;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .main__inner::before {
@@ -140,9 +142,15 @@ body {
   }
 
   .nav__wrapper {
+    padding: 0;
+  }
+  
+  .nav__inner {
     display: flex;
     justify-content: space-between;
     padding: 0 1em;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .nav__buttons-wrapper {
@@ -156,11 +164,6 @@ body {
 
   .nav__main-items {
     padding: 8px 24px;
-  }
-
-  .logo {
-    background-position-y: -5px;
-    line-height: 51px;
   }
 
   .nav__link--active {
