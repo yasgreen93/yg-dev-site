@@ -1,5 +1,6 @@
+require('dotenv').config();
+const cookieSession = require('cookie-session');
 const express = require('express');
-const session = require('express-session');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -10,10 +11,10 @@ const flash = require('connect-flash');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
-
 const routes = require('./routes/index');
 
 const app = express();
+const PORT = process.env.PORT || 3000
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,9 +27,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(session({
+app.use(cookieSession({
+  name: 'session',
   secret: process.env.SECRET,
-  key: process.env.KEY,
+  keys: process.env.KEYS,
+  resave: false,
+  saveUninitialized: true
 }));
 
 app.use(flash());
@@ -59,4 +63,6 @@ if (app.get('env') === 'development') {
 // production error handler
 app.use(errorHandlers.productionErrors);
 
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Express running → PORT ${PORT}`);
+});
