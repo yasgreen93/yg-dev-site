@@ -30,11 +30,10 @@ app.use(cookieParser());
 app.use(cookieSession({
   name: 'session',
   secret: process.env.SECRET,
-  keys: process.env.KEYS,
+  keys: [process.env.SECRET_KEY],
   resave: false,
   saveUninitialized: true
 }));
-
 app.use(flash());
 
 app.use((req, res, next) => {
@@ -43,8 +42,6 @@ app.use((req, res, next) => {
   res.locals.flashes = req.flash();
   next();
 });
-
-// pass variables to templates + all requests
 
 app.use('/', routes);
 
