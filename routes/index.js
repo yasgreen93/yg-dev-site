@@ -13,7 +13,7 @@ router.get('/portfolio', function(req, res, next) {
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { flashes: req.flash() });
+  res.render('contact');
 });
 
 router.post('/contact', validateFormFields, catchErrors(sendEmail));

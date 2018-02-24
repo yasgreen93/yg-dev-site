@@ -10,5 +10,5 @@ exports.sendEmail = async (req, res) => {
     filename: 'email'
   })
   req.flash('success', 'Thank you for getting in contact!');
-  res.render('contact');
+  res.redirect('/contact');
 }
