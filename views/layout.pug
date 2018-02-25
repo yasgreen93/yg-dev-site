@@ -19,7 +19,9 @@ html(lang="en")
           .nav__buttons-wrapper
             .nav__buttons-inner
               each item in h.menu
-                a.nav__link(href=item.slug, class=(currentPath.endsWith(item.slug) ? 'nav__link--active' : ''))
+                - const title = item.title.toLowerCase();
+                - const className = currentPath.endsWith(item.slug) ? `nav__link--active nav__link-${title}--active` : '';
+                a.nav__link(href=item.slug, class=`nav__link--${title} ${className}`)
                   i(class=item.icon)
                   span.nav__link-title #{item.title}
 

@@ -2,12 +2,13 @@ extends layout
 
 block content
   .main__inner
-    h1.header__title Other interests
+    h1.header__title.header__title--other Other interests
     .content__wrapper
       h2 I love to play music!
+      - const urlParams = "&color=%2374c5e7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=true&download=false"
       .iframe-item__wrapper
-        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300794907&color=%231915b1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=true&download=false")
+        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src=`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300794907${urlParams}`)
       .iframe-item__wrapper
-        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285326375&color=%231915b1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=true&download=false")
+        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src=`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285326375${urlParams}`)
       .iframe-item__wrapper
-        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/278406790&color=%231915b1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&download=false")
+        iframe(width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src=`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/278406790${urlParams}`)

@@ -1,3 +1,7 @@
+.header__title--contact {
+  color: $orange;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -10,7 +14,7 @@
 .input__box {
   padding: 1em;
   font-size: 17px;
-  color: $dark-blue;
+  color: $purple;
   margin: 0.5em 0;
   background-image: none !important;
   box-sizing: border-box;
@@ -21,7 +25,7 @@
 }
 
 .input__box::-webkit-input-placeholder {
-  color: $dark-blue;
+  color: $purple;
 }
 
 .input__box--message {
@@ -39,7 +43,7 @@
 }
 
 .input__box--submit:hover {
-  background-color: $dark-blue;
+  background-color: $green;
   cursor: pointer;
 }
 
