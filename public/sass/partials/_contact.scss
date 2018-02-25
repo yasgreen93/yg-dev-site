@@ -34,11 +34,12 @@
   align-self: center;
   background-color: $orange;
   color: $white;
-  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -webkit-appearance: none;
 }
 
 .input__box--submit:hover {
-  color: $dark-blue;
+  background-color: $dark-blue;
   cursor: pointer;
 }
 
