@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  .main__inner
-    h1.header__title.header__title--contact Contact
+  main.main__inner
+    header
+      h1.header__title.header__title--contact Contact
     .content__wrapper
       .contact-form__wrapper
         form.contact-form(action="/contact", method="post")
