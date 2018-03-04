@@ -38,5 +38,19 @@ html(lang="en")
           
     block content
 
+    block footer
+      footer.footer__wrapper
+        .footer__inner
+          .footer__title
+            .footer__item.footer__item--name Yasmin Green 2018
+          .footer__content
+            .footer__item.footer__item--sitemap
+              a.footer__item-link(href="/sitemap") Sitemap
+            .footer__item.footer__item--social-icons
+              each item in h.contactIcons
+                - const title = item.title.toLowerCase();
+                a.footer__item-link.footer__item-link-social(href=item.href, class=`footer__item-link--social-${title}`, title=`${item.title}`)
+                  i(class=item.icon)
+
     block scripts
       script(src="/dist/App.bundle.js")

@@ -7,6 +7,13 @@ exports.menu = [
   { slug: '/other', title: 'Other', icon: 'fas fa-music' }
 ];
 
+exports.contactIcons = [
+  { title: 'GitHub', href: 'https://github.com/yasgreen93', icon: 'fab fa-github' },
+  { title: 'Linkedin', href: 'https://www.linkedin.com/in/yasmin-green-b21a84110/', icon: 'fab fa-linkedin' },
+  { title: 'Twitter', href: 'https://twitter.com/ygdev19', icon: 'fab fa-twitter-square' },
+  { title: 'SoundCloud', href: 'https://soundcloud.com/yasmin-green', icon: 'fab fa-soundcloud' },
+]
+
 exports.dummyText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 exports.homePageContent = [
