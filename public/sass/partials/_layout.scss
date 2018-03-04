@@ -1,13 +1,16 @@
+html, body {
+  height: 100vh;
+}
+
 html {
   font-family: 'Work Sans', sans-serif;
-  height: 100vh;
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   background-color: $dark-purple;
-  min-height: 100vh;
+  position: relative;
 }
 
 .logo {
@@ -29,15 +32,12 @@ body {
 .main__inner,
 .flash-messages__wrapper {
   padding: 0 2em;
-  top: $nav-height;
   position: relative;
   color: $white;
-  overflow: hidden;
   max-width: 750px;
   margin: 0 auto;
 }
 
 .main__inner {
-  padding-bottom: 1em;
-  margin-bottom: $nav-height;
+  margin: 80px auto $nav-height;
 }
