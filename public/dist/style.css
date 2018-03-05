@@ -1,15 +1,16 @@
-html, body {
-  height: 100vh; }
-
 html {
-  font-family: 'Work Sans', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  font-family: 'Work Sans', sans-serif; }
 
 body {
-  margin: 0 auto;
   background-color: #212035;
   position: relative; }
+
+html, body {
+  margin: 0;
+  height: 100%; }
+
+.main__wrapper {
+  margin-bottom: 2em; }
 
 .logo {
   background-size: 5em;
@@ -35,7 +36,13 @@ body {
   margin: 0 auto; }
 
 .main__inner {
-  margin: 80px auto 60px; }
+  margin: 60px auto 0; }
+
+header {
+  margin-top: 1em; }
+
+.header__title {
+  margin: 0; }
 
 .nav__wrapper {
   background-color: #aff2d2;
@@ -210,9 +217,7 @@ body {
   font-weight: 500;
   color: #fff;
   padding: 0 2em;
-  position: absolute;
   width: 100%;
-  bottom: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 

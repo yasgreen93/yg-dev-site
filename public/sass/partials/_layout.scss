@@ -1,16 +1,22 @@
-html, body {
-  height: 100vh;
-}
-
 html {
   font-family: 'Work Sans', sans-serif;
-  box-sizing: border-box;
+	// box-sizing: border-box;
 }
 
 body {
-  margin: 0 auto;
   background-color: $dark-purple;
-  position: relative;
+	position: relative;
+	// height: 100vh;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+.main__wrapper {
+	// height: 100%;
+	margin-bottom: 2em;
 }
 
 .logo {
@@ -39,5 +45,13 @@ body {
 }
 
 .main__inner {
-  margin: 80px auto $nav-height;
+  margin: $nav-height auto 0;
+}
+
+header {
+	margin-top: 1em;
+}
+
+.header__title {
+	margin: 0;
 }

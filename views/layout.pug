@@ -1,51 +1,52 @@
 doctype html
 html(lang="en")
-  head
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(charset="UTF-8")
-    title #{h.siteName}
-    link(rel='stylesheet', href='/dist/style.css')
-    link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet")
-    script(src="/javascripts/helpers.js")
-  body
-    block header
-      nav.nav__wrapper
-        .nav__inner
-          .nav__main-items
-            a.logo(href="/")= h.siteName
-            .nav__mobile-button(onClick="toggleMenu()")
-              i.fas.fa-bars
-          .nav__buttons-wrapper
-            .nav__buttons-inner
-              each item in h.menu
-                - const title = item.title.toLowerCase();
-                - const className = currentPath.endsWith(item.slug) ? `nav__link--active nav__link-${title}--active` : '';
-                a.nav__link(href=item.slug, class=`nav__link--${title} ${className}`)
-                  i(class=item.icon)
-                  span.nav__link-title #{item.title}
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(charset="UTF-8")
+		title #{h.siteName}
+		link(rel='stylesheet', href='/dist/style.css')
+		link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet")
+		script(src="/javascripts/helpers.js")
+	body
+		block header
+			main.main__wrapper
+				nav.nav__wrapper
+					.nav__inner
+						.nav__main-items
+							a.logo(href="/")= h.siteName
+							.nav__mobile-button(onClick="toggleMenu()")
+								i.fas.fa-bars
+						.nav__buttons-wrapper
+							.nav__buttons-inner
+								each item in h.menu
+									- const title = item.title.toLowerCase();
+									- const className = currentPath.endsWith(item.slug) ? `nav__link--active nav__link-${title}--active` : '';
+									a.nav__link(href=item.slug, class=`nav__link--${title} ${className}`)
+										i(class=item.icon)
+										span.nav__link-title #{item.title}
 
-    block messages
-      if locals.flashes
-        .flash-messages__wrapper
-          - const categories = Object.keys(locals.flashes)
-          each category in categories
-            each message in flashes[category]
-              .flash(class=`flash--${category}`)
-                p.flash__text!= message
-                button.flash__remove(onClick="this.parentElement.remove()") &times;
+				block messages
+					if locals.flashes
+						.flash-messages__wrapper
+							- const categories = Object.keys(locals.flashes)
+							each category in categories
+								each message in flashes[category]
+									.flash(class=`flash--${category}`)
+										p.flash__text!= message
+										button.flash__remove(onClick="this.parentElement.remove()") &times;
 
-    block content
+				block content
 
-    block footer
-      footer.footer__wrapper
-        .footer__inner
-          .footer__item--name Yasmin Green
-          .footer__item--social-icons
-            each item in h.contactIcons
-              - const title = item.title.toLowerCase();
-              a.footer__item-link(href=item.href, class=`footer__item-link--${title}`, title=`${item.title}`)
-                i(class=item.icon)
+			block footer
+				footer.footer__wrapper
+					.footer__inner
+						.footer__item--name Yasmin Green
+						.footer__item--social-icons
+							each item in h.contactIcons
+								- const title = item.title.toLowerCase();
+								a.footer__item-link(href=item.href, class=`footer__item-link--${title}`, title=`${item.title}`)
+									i(class=item.icon)
 
-    block scripts
-      script(src="/dist/App.bundle.js")
+		block scripts
+			script(src="/dist/App.bundle.js")
