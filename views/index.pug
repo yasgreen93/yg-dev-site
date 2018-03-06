@@ -1,24 +1,25 @@
 extends layout
 
 block content
-  .main__inner
-    header
-      h1.header__title.header__title--home About me
-    .content__wrapper
-      .image
-        img.profile__image(src="/logo-orange.svg", data-src="/images/profile-pic.jpg" alt="Yasmin Green profile picture")
-      .main__text
-        each item in h.homePageContent
-          case item.type
-            when 'text'
-              p.content__item.content__item--text= item.text
-            when 'list'
-              - const listContent = item.content;
-              ul.content__item(class=`${item.customClass}`)
-                each listItem in listContent
-                  if listItem.type === 'image'
-                    li.content__item--list-item(title=`${listItem.text}`)
-                      p.content__item--list-label= listItem.text
-                      img.content__item--list-image(src=`./assets/${listItem.image}`, alt=`${listItem.text}`)
-            default
-              .content__item= item.text
+	.main__inner
+		header
+			h1.header__title.header__title--home Home
+			h2 About me
+		.content__wrapper
+			.image
+				img.profile__image(src="/logo-orange.svg", data-src="/images/profile-pic.jpg" alt="Yasmin Green profile picture")
+			.main__text
+				each item in h.homePageContent
+					case item.type
+						when 'text'
+							p.content__item.content__item--text= item.text
+						when 'list'
+							- const listContent = item.content;
+							ul.content__item(class=`${item.customClass}`)
+								each listItem in listContent
+									if listItem.type === 'image'
+										li.content__item--list-item(title=`${listItem.text}`)
+											p.content__item--list-label= listItem.text
+											img.content__item--list-image(src=`./assets/${listItem.image}`, alt=`${listItem.text}`)
+						default
+							.content__item= item.text

@@ -458,6 +458,18 @@ header {
 .iframe-item__wrapper {
   margin: 1em 0; }
 
+.content__item--link {
+  text-decoration: none;
+  color: #74c5e7;
+  font-weight: 500;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+
+.content__item--link:hover {
+  cursor: pointer;
+  color: #aff2d2; }
+
 .header__title--portfolio {
   color: #f98c8f; }
 
