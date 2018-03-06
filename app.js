@@ -26,11 +26,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
-app.use(cookieParser());
+app.use(cookieParser('keyboard cat'));
 app.use(cookieSession({
   name: 'session',
   secret: process.env.SECRET,
-  keys: [process.env.SECRET_KEY],
+	keys: [process.env.SECRET_KEY],
+	cookie: { maxAge: 60000 }
 }));
 app.use(flash());
 
