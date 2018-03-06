@@ -16,7 +16,13 @@ router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
 
-router.post('/contact', validateFormFields, catchErrors(sendEmail));
+router.post('/contact',
+	validateFormFields,
+	catchErrors(sendEmail),
+	function(req, res, next) {
+		res.redirect('/contact')
+	}
+);
 
 router.get('/other', function(req, res, next) {
   res.render('other');

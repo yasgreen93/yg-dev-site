@@ -1,6 +1,6 @@
 const mail = require('../handlers/mail');
 
-exports.sendEmail = async (req, res) => {
+exports.sendEmail = async (req, res, next) => {
   const { name, email, subject, message } = req.body;
   await mail.send({
     name,
@@ -9,6 +9,6 @@ exports.sendEmail = async (req, res) => {
     message,
     filename: 'email'
 	})
-  req.flash('success', 'Thank you for getting in contact!');
-	res.redirect('/contact');
+	req.flash('success', 'Thank you for getting in contact!');
+	return next();
 }
