@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-  font-family: 'Work Sans', sans-serif;
+  font-family: $default-font;
 	box-sizing: border-box;
 }
 
@@ -14,6 +14,10 @@ body {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-gap: 1em;
+}
+
+h2 {
+	margin: 0.5em 0;
 }
 
 .main__wrapper {

@@ -12,7 +12,7 @@ exports.contactIcons = [
   { title: 'Linkedin', href: 'https://www.linkedin.com/in/yasmin-green-b21a84110/', icon: 'fab fa-linkedin' },
   { title: 'Twitter', href: 'https://twitter.com/ygdev19', icon: 'fab fa-twitter-square' },
   { title: 'SoundCloud', href: 'https://soundcloud.com/yasmin-green', icon: 'fab fa-soundcloud' },
-]
+];
 
 exports.dummyText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -79,4 +79,9 @@ exports.otherPageContent = [
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285326375${iframeSrcParams}` },
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/278406790${iframeSrcParams}` },
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268760366${iframeSrcParams}`},
+];
+
+exports.contactPageContent = [
+	{ type: 'text', text: 'Find me on other sites:' },
+	{ type: 'list', customClass: 'contact__other--list' }
 ];

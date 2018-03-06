@@ -8,7 +8,7 @@ exports.sendEmail = async (req, res) => {
     subject,
     message,
     filename: 'email'
-  })
+	})
   req.flash('success', 'Thank you for getting in contact!');
-  res.redirect('/contact');
+	res.redirect('/contact');
 }
