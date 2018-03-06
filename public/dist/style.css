@@ -1,16 +1,22 @@
-html {
-  font-family: 'Work Sans', sans-serif; }
-
-body {
-  background-color: #212035;
-  position: relative; }
-
 html, body {
   margin: 0;
   height: 100%; }
 
+html {
+  font-family: 'Work Sans', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-color: #212035;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 1em; }
+
 .main__wrapper {
-  margin-bottom: 2em; }
+  position: relative;
+  margin-bottom: 60px; }
 
 .logo {
   background-size: 5em;
@@ -33,10 +39,8 @@ html, body {
   position: relative;
   color: #fff;
   max-width: 750px;
-  margin: 0 auto; }
-
-.main__inner {
-  margin: 60px auto 0; }
+  margin: 0 auto;
+  top: 60px; }
 
 header {
   margin-top: 1em; }

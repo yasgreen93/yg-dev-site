@@ -1,22 +1,24 @@
-html {
-  font-family: 'Work Sans', sans-serif;
-	// box-sizing: border-box;
-}
-
-body {
-  background-color: $dark-purple;
-	position: relative;
-	// height: 100vh;
-}
-
 html, body {
 	margin: 0;
 	height: 100%;
 }
 
+html {
+  font-family: 'Work Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-purple;
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-gap: 1em;
+}
+
 .main__wrapper {
-	// height: 100%;
-	margin-bottom: 2em;
+	position: relative;
+	margin-bottom: $nav-height;
 }
 
 .logo {
@@ -41,11 +43,8 @@ html, body {
   position: relative;
   color: $white;
   max-width: 750px;
-  margin: 0 auto;
-}
-
-.main__inner {
-  margin: $nav-height auto 0;
+	margin: 0 auto;
+	top: $nav-height;
 }
 
 header {
