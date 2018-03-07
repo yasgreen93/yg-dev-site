@@ -13,7 +13,8 @@ const mail = require('../handlers/mail');
 // 	return next();
 // }
 exports.sendEmail = (req, res, next) => {
-  const { name, email, subject, message } = req.body;
+	const { name, email, subject, message } = req.body;
 	req.flash('success', 'Thank you for getting in contact!');
-	res.redirect('/contact');
+	console.log('--sessionOptions before redirect', req.session);
+	res.redirect('/contact')
 }

@@ -31,13 +31,13 @@ app.use(cookieSession({
   name: 'session',
   secret: process.env.SECRET,
 	keys: [process.env.SECRET_KEY],
-	cookie: { maxAge: 60000 }
+	maxAge: 24 * 60 * 60 * 1000
 }));
 app.use(flash());
 
 app.use((req, res, next) => {
-  res.locals.h = helpers;
-  res.locals.flashes = req.flash();
+	res.locals.h = helpers;
+	res.locals.flashes = req.flash();
   res.locals.currentPath = req.path;
   next();
 });
