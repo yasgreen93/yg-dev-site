@@ -7,7 +7,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
-const flash = require('connect-flash');
+const flash = require('express-flash');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
