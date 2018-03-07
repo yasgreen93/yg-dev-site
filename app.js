@@ -1,5 +1,6 @@
 require('dotenv').config();
 const cookieSession = require('cookie-session');
+const flash = require('express-flash');
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -7,7 +8,6 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
-const flash = require('express-flash');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
