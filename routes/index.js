@@ -24,6 +24,8 @@ router.post('/contact',
 	}
 );
 
+router.post('/contact2', sendEmail);
+
 router.get('/other', function(req, res, next) {
   res.render('other');
 });
