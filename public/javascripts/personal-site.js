@@ -4,5 +4,5 @@ import Blazy from './blazy';
 
 const blazy = new Blazy({
   selector: 'img',
-  successClass: 'profile__image--loaded'
+  successClass: 'image--loaded'
 });

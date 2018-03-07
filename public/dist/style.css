@@ -8,7 +8,6 @@ html {
           box-sizing: border-box; }
 
 body {
-  background-color: #212035;
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
@@ -292,13 +291,16 @@ header {
 .profile__image {
   width: 90%;
   border-radius: 5px;
-  min-height: 200px;
+  min-height: 200px; }
+
+.profile__image,
+.content__item--list-image {
   opacity: 0.2;
   -webkit-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
   transition: opacity 1s ease; }
 
-.profile__image--loaded {
+.image--loaded {
   opacity: 1; }
 
 .content__item--list {

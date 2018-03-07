@@ -80,7 +80,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var blazy = new _blazy2.default({
   selector: 'img',
-  successClass: 'profile__image--loaded'
+  successClass: 'image--loaded'
 });
 
 /***/ }),

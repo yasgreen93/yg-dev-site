@@ -12,11 +12,15 @@
   width: 90%;
   border-radius: 5px;
   min-height: 200px;
-  opacity: 0.2;
-  transition: opacity 1s ease;
 }
 
-.profile__image--loaded {
+.profile__image,
+.content__item--list-image {
+	opacity: 0.2;
+	transition: opacity 1s ease;
+}
+
+.image--loaded {
   opacity: 1;
 }
 
