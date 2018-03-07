@@ -7,13 +7,13 @@ block content
 			h2 Message me
 		.content__wrapper
 			.contact-form__wrapper
-				form.contact-form(action="/contact2", method="post")
+				form.contact-form(action="/contact", method="post")
 					.contact-form__inner-top
-						input.input__box.input__box--name(type="text", name="name" placeholder="Name" autocomplete="name")
-						input.input__box.input__box--email(type="email", name="email" placeholder="Email" autocomplete="email")
+						input.input__box.input__box--name(type="text", name="name" placeholder="Name" autocomplete="name" required)
+						input.input__box.input__box--email(type="email", name="email" placeholder="Email" autocomplete="email" required)
 					.contact-form__inner-bottom
 						input.input__box.input__box--subject(type="text", name="subject" placeholder="Subject" autocomplete="subject")
-						textarea.input__box.input__box--message(name="message", cols="30", rows="10" placeholder="Message")
+						textarea.input__box.input__box--message(name="message", cols="30", rows="10" placeholder="Message" required)
 						input.input__box.input__box--submit(type="submit", value="Send message")
 			each item in h.contactPageContent
 				case item.type

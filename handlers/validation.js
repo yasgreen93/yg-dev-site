@@ -5,7 +5,7 @@ exports.validateFormFields = (req, res, next) => {
   req.checkBody('message', 'Message cannot be blank').notEmpty();
   const errors = req.validationErrors();
   if (errors) {
-    req.flash('error', errors.map(err => err.msg));
+    req.session.flash({ error: errors.map(err => err.msg) });
     res.render('contact', { body: req.body, flashes: req.flash() });
     return;
   }
