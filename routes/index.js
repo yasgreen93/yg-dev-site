@@ -9,6 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/portfolio', function(req, res, next) {
+	req.flash('success', 'Wooooo');
+	req.flash('info', 'infowooooo');
   res.render('portfolio');
 });
 
