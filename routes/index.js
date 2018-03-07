@@ -13,7 +13,6 @@ router.get('/portfolio', function(req, res, next) {
 });
 
 router.get('/contact', function(req, res, next) {
-	console.log('--sessionOptions after redirect', req.session);
   res.render('contact');
 });
 
