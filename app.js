@@ -29,14 +29,13 @@ app.use(expressValidator());
 app.use(cookieParser('keyboard cat'));
 console.log({
 	secret: process.env.SECRET,
-	keys: [process.env.SECRET_KEY],
+	keys: process.env.SECRET_KEY,
 });
 app.use(cookieSession({
   name: 'session',
   secret: process.env.SECRET,
 	keys: [process.env.SECRET_KEY],
 	maxAge: 24 * 60 * 60 * 1000,
-	domain: 'my-website-wip.herokuapp.com',
 	secure: false
 }));
 app.use(flash());
