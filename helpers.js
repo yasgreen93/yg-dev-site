@@ -1,3 +1,14 @@
+const {
+	logoAWS,
+	logoCSS,
+	logoGraphql,
+	logoHTML,
+	logoNode,
+	logoReact,
+	logoRedux,
+	logoRelay
+} = require('./public/assets');
+
 exports.siteName = 'YG | DEV';
 
 exports.menu = [
@@ -29,42 +40,42 @@ exports.homePageContent = [
       {
         type: "image",
         text: "ReactJS",
-        image: "logo-react.png",
+        image: logoReact,
       },
       {
         type: "image",
         text: "NodeJS",
-        image: "logo-node.png"
+        image: logoNode
       },
       {
         type: "image",
         text: "Redux",
-        image: "logo-redux.png"
+        image: logoRedux
       },
       {
         type: "image",
         text: "Graphql",
-        image: "logo-graphql.png"
+        image: logoGraphql
       },
       {
         type: "image",
         text: "Relay",
-        image: "logo-relay.png"
+        image: logoRelay
       },
       {
         type: "image",
         text: "HTML",
-        image: "logo-html.png"
+        image: logoHTML
       },
       {
         type: "image",
         text: "CSS",
-        image: "logo-css.png"
+        image: logoCSS
       },
       {
         type: "image",
         text: "AWS",
-        image: "logo-aws.png"
+        image: logoAWS
       }
     ]
   },
