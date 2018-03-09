@@ -57,7 +57,8 @@
 }
 
 .contact__other-list-item {
-	list-style: none;
+  list-style: none;
+  color: $orange;
 	& > * {
     transition: all 0.5s ease;
     -webkit-transform: translateZ(0);
@@ -74,9 +75,10 @@
 
 .contact__other-link {
 	text-decoration: none;
-	color: $white;
+	color: $orange;
 	margin-left: 1em;
-	display: inline-block;
+  display: inline-block;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 580px) {

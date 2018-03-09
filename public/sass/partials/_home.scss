@@ -20,6 +20,10 @@
 	transition: opacity 1s ease;
 }
 
+.home__item--link {
+  color: $pink;
+}
+
 .image--loaded {
   opacity: 1;
 }

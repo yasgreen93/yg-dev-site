@@ -61,3 +61,21 @@ header {
 .header__title {
 	margin: 0;
 }
+
+.content__item--link,
+.home__item--link,
+.other__item--link,
+.portfolio__item--link {
+	text-decoration: none;
+	color: $pink;
+	font-weight: 500;
+	transition: color 0.5s ease;
+}
+
+.content__item--link:hover,
+.home__item--link:hover,
+.other__item--link:hover,
+.portfolio__item--link:hover {
+	cursor: pointer;
+	color: $green;
+}

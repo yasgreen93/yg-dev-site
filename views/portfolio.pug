@@ -1,11 +1,12 @@
 extends layout
 
 block content
-	.main__inner
-		header
-			h1.header__title.header__title--portfolio Portfolio
-		.content__wrapper
-			.main__text
-				p= h.dummyText
-				p= h.dummyText
-				p= h.dummyText
+  .main__inner
+    header
+      h1.header__title.header__title--portfolio Portfolio
+      h2 Work and side projects
+    .content__wrapper
+      .main__text
+        p #[a(class="portfolio__item--link" href="https://www.economist.com") The Economist]
+        p= h.dummyText
+        p= h.dummyText

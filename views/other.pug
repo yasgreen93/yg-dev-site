@@ -9,7 +9,7 @@ block content
 			each item in h.otherPageContent
 				case item.type
 					when 'text'
-						p.content__item.content__item--text= item.text
+						p.content__item--text= item.text
 					when 'iframe'
 						iframe.iframe-item__wrapper(width=item.width, height=item.height, scrolling=item.scrolling, src=item.src)
-			p.content__item.content__item--text Find more of my music on my #[a(class="content__item--link" href="https://soundcloud.com/yasmin-green") SoundCloud page].
+			p.content__item--text Find more of my music on my #[a(class="other__item--link" href="https://soundcloud.com/yasmin-green") SoundCloud page] and some of my covers on my #[a(class="other__item--link" href="https://www.youtube.com/channel/UCuMzZ3x7EBDXmZ2Hj_q6Z3g") YouTube channel].

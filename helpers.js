@@ -14,7 +14,7 @@ exports.siteName = 'YG | DEV';
 exports.menu = [
   { slug: '/', title: 'Home', icon: 'fas fa-home' },
   { slug: '/portfolio', title: 'Portfolio', icon: 'fas fa-code' },
-  { slug: '/contact', title: 'Contact', icon: 'far fa-envelope' },
+  { slug: '/contact', title: 'Contact', icon: 'fas fa-envelope' },
   { slug: '/other', title: 'Other', icon: 'fas fa-music' }
 ];
 
@@ -76,7 +76,7 @@ exports.homePageContent = [
       }
     ]
   },
-  { type: "text", text: "Please take a look around my site and leave a message!" }
+  { type: "text", text: "Please take a look around and leave me a message!" }
 ];
 
 const iframeWidth = "100%";
@@ -84,7 +84,7 @@ const iframeHeight = "166";
 const iframeScrolling = "no";
 const iframeSrcParams = "&color=%2374c5e7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=true&download=false"
 exports.otherPageContent = [
-	{ type: "text", text: "My main hobby outside of coding is music. I started learning the piano at a young age and then I taught myself guitar in 2009 when I was 16. I love to make my own instrumental music using acoustic guitar and piano using Logic Pro X. Check out some of my songs below!" },
+	{ type: "text", text: "My main hobby outside of coding is music. I started learning the piano at a young age and then I taught myself guitar in 2009 when I was 16. I started uploading guitar covers onto YouTube but now I love to make my own instrumental music with acoustic guitar and piano using Logic Pro X. Check out some of my songs below!" },
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300794907${iframeSrcParams}` },
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285326375${iframeSrcParams}` },
 	{ type: "iframe", width: iframeWidth, height: iframeHeight, scrolling: iframeScrolling, src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/278406790${iframeSrcParams}` },

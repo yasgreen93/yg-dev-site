@@ -9,17 +9,17 @@ block content
 			.image
 				img.profile__image.b-lazy(src=`${h.orangeLogoSVG}`, data-src="/images/profile-pic.jpg" alt="Yasmin Green profile picture")
 			.main__text
-				p.content__item.content__item--text Hi I'm Yasmin Green.
-				p.content__item.content__item--text I am currently working in the world of Javascript as a front end developer at #[a(class="content__item--link" href="https://www.economist.com") The Economist] in London. Back in 2015 I graduated with a first class degree in Forensic Science from the #[a(class="content__item--link" href="http://www.lincoln.ac.uk/home/") University of Lincoln], however I decided that I wanted to go into web development. Just before the new year I completed a three month course in graphic design from #[a(class="content__item--link" href="https://www.shillingtoneducation.com/") Shillington College] in London and in the new year joined #[a(class="content__item--link" href="http://www.makersacademy.com/") Makers Academy] to learn to code!
-				p.content__item.content__item--text I love learning new things and accepting challenges whether it be more on the logical side or the more creative side. I also love table tennis.
+				p.content__item--text Hi I'm Yasmin Green.
+				p.content__item--text I am currently working in the world of Javascript as a front end developer at #[a(class="home__item--link" href="https://www.economist.com") The Economist] in London. Back in 2015 I graduated with a first class degree in Forensic Science from the #[a(class="home__item--link" href="http://www.lincoln.ac.uk/home/") University of Lincoln], however I decided that I wanted to go into web development. I then went on to complete a three month course in graphic design at #[a(class="home__item--link" href="https://www.shillingtoneducation.com/") Shillington College] in London followed by #[a(class="home__item--link" href="http://www.makersacademy.com/") Makers Academy] where I learnt to code!
+				p.content__item--text I love learning new things and accepting challenges whether it be more on the logical side or the more creative side. I also love table tennis.
 
 				each item in h.homePageContent
 					case item.type
 						when 'text'
-							p.content__item.content__item--text= item.text
+							p.content__item--text= item.text
 						when 'list'
 							- const listContent = item.content;
-							ul.content__item(class=`${item.customClass}`)
+							ul(class=`${item.customClass}`)
 								each listItem in listContent
 									if listItem.type === 'image'
 										li.content__item--list-item(title=`${listItem.text}`)
