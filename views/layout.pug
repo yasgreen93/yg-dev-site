@@ -34,7 +34,7 @@ html(lang="en")
 				nav.nav__wrapper
 					.nav__inner
 						.nav__main-items
-							a.logo(href="/")= h.siteName
+							a.logo(href="/" title=h.siteName)= h.siteName
 							.nav__mobile-button(onClick="toggleMenu()")
 								i.fas.fa-bars
 						.nav__buttons-wrapper
@@ -42,7 +42,7 @@ html(lang="en")
 								each item in h.menu
 									- const title = item.title.toLowerCase();
 									- const className = currentPath.endsWith(item.slug) ? `nav__link--active nav__link-${title}--active` : '';
-									a.nav__link(href=item.slug, class=`nav__link--${title} ${className}`)
+									a.nav__link(href=item.slug, class=`nav__link--${title} ${className}` title=item.title)
 										i(class=item.icon)
 										span.nav__link-title #{item.title}
 

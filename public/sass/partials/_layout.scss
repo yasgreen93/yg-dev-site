@@ -28,22 +28,6 @@ p {
 	margin-bottom: $nav-height;
 }
 
-.logo {
-  background-size: 5em;
-  background-repeat: no-repeat;
-  width: 7em;
-  background-position-x: -25px;
-  background-position-y: -8px;
-  height: $logo-height;
-  line-height: 45px;
-  background-image: $logo-orange;
-  text-align: right;
-  font-weight: 500;
-  font-size: 18px;
-  text-decoration: none;
-  color: $purple;
-}
-
 .main__inner,
 .flash-messages__wrapper {
   padding: 0 2em;

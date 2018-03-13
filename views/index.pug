@@ -7,10 +7,10 @@ block content
 			h2 About me
 		.content__wrapper
 			.image
-				img.profile__image.b-lazy(src=`${h.orangeLogoSVG}`, data-src=h.siteProfilePic alt="Yasmin Green profile picture")
+				img.profile__image.b-lazy(src=h.orangeLogoSVG data-src=h.siteProfilePic alt=h.siteName)
 			.main__text
 				p.content__item--text Hi I'm Yasmin Green.
-				p.content__item--text I am currently working in the world of Javascript as a front end developer at #[a(class="home__item--link" href="https://www.economist.com") The Economist] in London. Back in 2015 I graduated with a first class degree in Forensic Science from the #[a(class="home__item--link" href="http://www.lincoln.ac.uk/home/") University of Lincoln], however I decided that I wanted to go into web development. I then went on to complete a three month course in graphic design at #[a(class="home__item--link" href="https://www.shillingtoneducation.com/") Shillington College] in London followed by #[a(class="home__item--link" href="http://www.makersacademy.com/") Makers Academy] where I learnt to code!
+				p.content__item--text I am currently working in the world of Javascript as a front end developer at #[a(class="home__item--link" href="https://www.economist.com" title="The Economist") The Economist] in London. Back in 2015 I graduated with a first class degree in Forensic Science from the #[a(class="home__item--link" href="http://www.lincoln.ac.uk/home/" title="University of Lincoln") University of Lincoln], however I decided that I wanted to go into web development. I then went on to complete a three month course in graphic design at #[a(class="home__item--link" href="https://www.shillingtoneducation.com/" title="Shillington College") Shillington College] in London followed by #[a(class="home__item--link" href="http://www.makersacademy.com/" title="Makers Academy") Makers Academy] where I learnt to code!
 				p.content__item--text I love learning new things and accepting challenges whether it be more on the logical side or the more creative side. I also love table tennis.
 
 				each item in h.homePageContent
@@ -19,11 +19,11 @@ block content
 							p.content__item--text= item.text
 						when 'list'
 							- const listContent = item.content;
-							ul(class=`${item.customClass}`)
+							ul(class=item.customClass)
 								each listItem in listContent
 									if listItem.type === 'image'
-										li.content__item--list-item(title=`${listItem.text}`)
+										li.content__item--list-item(title=listItem.text)
 											p.content__item--list-label= listItem.text
-											img.content__item--list-image.b-lazy(src=h.orangeLogoSVG, data-src=listItem.image, alt=listItem.text)
+											img.content__item--list-image.b-lazy(src=h.orangeLogoSVG data-src=listItem.image alt=listItem.text)
 						default
 							.content__item= item.text
