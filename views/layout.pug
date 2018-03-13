@@ -7,7 +7,23 @@ html(lang="en")
 		script(src="/javascripts/helpers.js" async)
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(charset="UTF-8")
-		title #{h.siteName}
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(property="og:image" content=h.siteProfilePic)
+		meta(name="description" content=h.siteDescription)
+		link(rel="canonical", href=h.siteURL)
+		meta(property="og:locale" content="en_GB")
+		meta(property="og:type" content="website")
+		meta(property="og:title" content=h.siteName)
+		meta(property="og:description" content=h.siteDescription)
+		meta(property="og:url" content=h.siteURL)
+		meta(property="og:site_name" content=h.siteName)
+		meta(name="twitter:card" content="summary")
+		meta(name="twitter:description" content=h.siteDescription)
+		meta(name="twitter:title" content=h.siteName)
+		meta(name="twitter:site" content=h.twitterUser)
+		meta(name="twitter:creator" content=h.twitterUser)
+		script(type="application/ld+json") {"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/my-website-wip.herokuapp.com\/","name":"YG | DEV","potentialAction":{"@type":"SearchAction","target":"http:\/\/my-website-wip.herokuapp.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}
+		title= h.siteName
 	body(style="background-color:#212035")
 		block header
 			main.main__wrapper
