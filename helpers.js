@@ -11,7 +11,7 @@ const {
 
 exports.siteName = 'YASMIN GREEN | DEVELOPER';
 exports.siteDescription = "Yasmin Green - developer working with Javascript (ES5, ES6), HTML, CSS, Pug, NodeJS, ReactJS and more, building small and medium websites."
-exports.siteURL = "http://my-website-wip.herokuapp.com";
+exports.siteURL = "https://personal-website-rioibqdkav.now.sh/";
 exports.twitterUser = "@ygdev19";
 exports.siteProfilePic = "https://s3.eu-west-2.amazonaws.com/ygdevbucket1/profile-pic.jpg";
 

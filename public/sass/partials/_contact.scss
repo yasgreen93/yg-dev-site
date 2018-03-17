@@ -104,5 +104,8 @@
 	.contact__other--list {
 		grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
 		justify-items: center;
-	}
+  }
+  .contact__other-list-item {
+    font-size: 18px;
+  }
 }
