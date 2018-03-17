@@ -51,7 +51,7 @@ app.use(errorHandlers.notFound);
 app.use(errorHandlers.flashValidationErrors);
 
 // Otherwise this was a really bad error we didn't expect! Shoot eh
-if (app.get('env') === 'development') {
+if (process.env.NODE_ENV !== 'production') {
   /* Development Error Handler - Prints stack trace */
   app.use(errorHandlers.developmentErrors);
 }

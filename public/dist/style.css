@@ -541,4 +541,14 @@ header {
 .portfolio__item--link {
   color: #f98c8f; }
 
+.header__title--error {
+  color: #aff2d2; }
+
+.content__wrapper--error {
+  margin: 0 auto;
+  max-width: 400px; }
+
+.content__wrapper--error .logo__image {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map*/

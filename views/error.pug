@@ -1,9 +1,9 @@
 extends layout
 
 block content
-	.main__inner
-		h1.header__title.header__title--error= Error
-			.content__wrapper
-				h2= status
-				p= message
-	pre.error!= stackHighlighted
+  .main__inner
+    header
+      h1.header__title.header__title--error Error
+      h2 Oops something went wrong!
+    .content__wrapper.content__wrapper--error
+      img.logo__image(src=h.orangeLogoSVG alt="Logo")
