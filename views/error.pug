@@ -3,7 +3,8 @@ extends layout
 block content
   .main__inner
     header
-      h1.header__title.header__title--error Error
-      h2 Oops something went wrong!
+      h1.header__title.header__title--error= status
+      - const message = status === 404 ? `Oops! Looks like ${currentPath} does not exist.` : "Oops! Something went wrong."
+      h2= message
     .content__wrapper.content__wrapper--error
       img.logo__image(src=h.orangeLogoSVG alt="Logo")
